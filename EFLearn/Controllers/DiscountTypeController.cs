@@ -26,5 +26,10 @@ namespace EFLearn.Controllers
             return View();
         }
 
+        public ActionResult Hello1()
+        {
+            return View();
+        }
+
     }
 }
