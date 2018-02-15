@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="TestModelNamespace.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="M_Client">
+          <Key>
+            <PropertyRef Name="Pid" />
+          </Key>
+          <Property Name="Pid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="char" MaxLength="20" />
+          <Property Name="Client" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="ClientChainXid" Type="int" />
+          <Property Name="LegalName" Type="varchar" MaxLength="300" />
+          <Property Name="RegistrationNo" Type="varchar" MaxLength="100" />
+          <Property Name="PriorityXid" Type="int" />
+          <Property Name="LanguageXid" Type="int" />
+          <Property Name="ParentXid" Type="int" Nullable="false" />
+          <Property Name="ReceiveOtherInformation" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="SubscribeToThirdParty" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="Status" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="ClientType" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="ShowCommOnInv" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="TaxRecoverableYN" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="VatNumber" Type="char" MaxLength="1" />
+          <Property Name="VatRegistrationNo" Type="varchar" MaxLength="50" />
+          <Property Name="NominalCode" Type="char" MaxLength="10" />
+          <Property Name="PrepayReqd" Type="char" MaxLength="1" />
+          <Property Name="NationalityXid" Type="int" />
+          <Property Name="DefaultCurrencyXid" Type="int" />
+          <Property Name="InvoiceDays" Type="int" />
+          <Property Name="CreditDays" Type="int" />
+          <Property Name="CreditLimit" Type="money" />
+          <Property Name="MarketXid" Type="int" />
+          <Property Name="wwwAddress" Type="varchar" MaxLength="100" />
+          <Property Name="SourceXid" Type="int" />
+          <Property Name="CommunicationMethod" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="HeadOfficeYN" Type="char" MaxLength="1" />
+          <Property Name="CommissionYN" Type="char" MaxLength="1" />
+          <Property Name="NationXid" Type="int" />
+          <Property Name="TaxApplicableCountryXid" Type="int" />
+          <Property Name="PrivateYN" Type="char" MaxLength="1" />
+          <Property Name="SubStatusXid" Type="int" />
+          <Property Name="SubMarketXid" Type="int" />
+          <Property Name="DefaultTariffXid" Type="int" />
+          <Property Name="ForwardBookingsCreditLimit" Type="money" />
+          <Property Name="PastBookingsCreditLimit" Type="money" />
+          <Property Name="PastBookingsBasedOn" Type="char" MaxLength="1" />
+          <Property Name="OnlineBookingCutOffDays" Type="int" />
+          <Property Name="NotesXid" Type="int" />
+          <Property Name="LastEdit" Type="datetime" Nullable="false" />
+          <Property Name="LastEditByXid" Type="int" Nullable="false" />
+          <Property Name="CompanyXid" Type="int" Nullable="false" />
+          <Property Name="UseClientLogoYN" Type="char" MaxLength="1" />
+          <Property Name="AutoInvoicingYN" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="AutoInvoiceLogic" Type="char" MaxLength="2" />
+          <Property Name="AutoInvoicePBPC" Type="char" MaxLength="1" />
+          <Property Name="IncreaseCancellationDays" Type="int" />
+          <Property Name="SameAsBuyCurrencyYN" Type="char" MaxLength="1" />
+          <Property Name="ShowMsbeYN" Type="char" MaxLength="1" />
+          <Property Name="DateFormat" Type="int" />
+          <Property Name="ExportedFileName" Type="varchar" MaxLength="200" />
+          <Property Name="DefaultExpiryDays" Type="int" />
+          <Property Name="B2BExpiryDays" Type="int" />
+          <Property Name="B2CExpiryDays" Type="int" />
+          <Property Name="reminderdays1" Type="int" />
+          <Property Name="reminderdays2" Type="int" />
+          <Property Name="SlabOrTariff" Type="char" MaxLength="1" />
+          <Property Name="SupplierBatchSenderAddress" Type="varchar" MaxLength="100" />
+          <Property Name="SupplierBatchSenderName" Type="varchar" MaxLength="100" />
+          <Property Name="ShowClientNameOnSupplierDocYN" Type="char" MaxLength="1" />
+          <Property Name="ShowAllocationLogicYN" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="ScheduleDay" Type="varchar" MaxLength="200" />
+          <Property Name="BookingNotificationEmailAddress" Type="varchar" MaxLength="1000" />
+          <Property Name="ExtractDate" Type="datetime" />
+          <Property Name="ExtractYN" Type="char" MaxLength="1" />
+          <Property Name="ExportToAccounts" Type="char" MaxLength="1" />
+          <Property Name="AutoCancelYN" Type="char" MaxLength="1" />
+          <Property Name="AutoReminderYN" Type="char" MaxLength="1" />
+          <Property Name="ClientInSecureCreditYN" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="M_DiscountType">
+          <Key>
+            <PropertyRef Name="Pid" />
+          </Key>
+          <Property Name="Pid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DiscountType" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="NotesXid" Type="int" />
+          <Property Name="LastEdit" Type="datetime" Nullable="false" />
+          <Property Name="LastEditByXid" Type="int" Nullable="false" />
+          <Property Name="CompanyXid" Type="int" Nullable="false" />
+          <Property Name="Sequence" Type="int" />
+          <Property Name="Code" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityContainer Name="TestModelNamespaceStoreContainer">
+          <EntitySet Name="M_Client" EntityType="Self.M_Client" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="M_DiscountType" EntityType="Self.M_DiscountType" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TestModelNamespace" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="M_DiscountType">
+          <Key>
+            <PropertyRef Name="Pid" />
+          </Key>
+          <Property Name="Pid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DiscountType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NotesXid" Type="Int32" />
+          <Property Name="LastEdit" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastEditByXid" Type="Int32" Nullable="false" />
+          <Property Name="CompanyXid" Type="Int32" Nullable="false" />
+          <Property Name="Sequence" Type="Int32" />
+          <Property Name="Code" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="TestDBContext" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="M_DiscountType" EntityType="Self.M_DiscountType" />
+          <EntitySet Name="M_Client" EntityType="TestModelNamespace.M_Client" />
+        </EntityContainer>
+        <EntityType Name="M_Client">
+          <Key>
+            <PropertyRef Name="Pid" />
+          </Key>
+          <Property Name="Pid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="Client" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ClientChainXid" Type="Int32" />
+          <Property Name="LegalName" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="RegistrationNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PriorityXid" Type="Int32" />
+          <Property Name="LanguageXid" Type="Int32" />
+          <Property Name="ParentXid" Type="Int32" Nullable="false" />
+          <Property Name="ReceiveOtherInformation" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="SubscribeToThirdParty" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ClientType" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ShowCommOnInv" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="TaxRecoverableYN" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="VatNumber" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="VatRegistrationNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NominalCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="PrepayReqd" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="NationalityXid" Type="Int32" />
+          <Property Name="DefaultCurrencyXid" Type="Int32" />
+          <Property Name="InvoiceDays" Type="Int32" />
+          <Property Name="CreditDays" Type="Int32" />
+          <Property Name="CreditLimit" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="MarketXid" Type="Int32" />
+          <Property Name="wwwAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SourceXid" Type="Int32" />
+          <Property Name="CommunicationMethod" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="HeadOfficeYN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="CommissionYN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="NationXid" Type="Int32" />
+          <Property Name="TaxApplicableCountryXid" Type="Int32" />
+          <Property Name="PrivateYN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="SubStatusXid" Type="Int32" />
+          <Property Name="SubMarketXid" Type="Int32" />
+          <Property Name="DefaultTariffXid" Type="Int32" />
+          <Property Name="ForwardBookingsCreditLimit" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="PastBookingsCreditLimit" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="PastBookingsBasedOn" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="OnlineBookingCutOffDays" Type="Int32" />
+          <Property Name="NotesXid" Type="Int32" />
+          <Property Name="LastEdit" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastEditByXid" Type="Int32" Nullable="false" />
+          <Property Name="CompanyXid" Type="Int32" Nullable="false" />
+          <Property Name="UseClientLogoYN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AutoInvoicingYN" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AutoInvoiceLogic" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="AutoInvoicePBPC" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="IncreaseCancellationDays" Type="Int32" />
+          <Property Name="SameAsBuyCurrencyYN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ShowMsbeYN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="DateFormat" Type="Int32" />
+          <Property Name="ExportedFileName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="DefaultExpiryDays" Type="Int32" />
+          <Property Name="B2BExpiryDays" Type="Int32" />
+          <Property Name="B2CExpiryDays" Type="Int32" />
+          <Property Name="reminderdays1" Type="Int32" />
+          <Property Name="reminderdays2" Type="Int32" />
+          <Property Name="SlabOrTariff" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="SupplierBatchSenderAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SupplierBatchSenderName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ShowClientNameOnSupplierDocYN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ShowAllocationLogicYN" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ScheduleDay" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="BookingNotificationEmailAddress" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="ExtractDate" Type="DateTime" Precision="3" />
+          <Property Name="ExtractYN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ExportToAccounts" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AutoCancelYN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="AutoReminderYN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ClientInSecureCreditYN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TestModelNamespaceStoreContainer" CdmEntityContainer="TestDBContext">
+          <EntitySetMapping Name="M_DiscountType">
+            <EntityTypeMapping TypeName="TestModelNamespace.M_DiscountType">
+              <MappingFragment StoreEntitySet="M_DiscountType">
+                <ScalarProperty Name="Pid" ColumnName="Pid" />
+                <ScalarProperty Name="DiscountType" ColumnName="DiscountType" />
+                <ScalarProperty Name="NotesXid" ColumnName="NotesXid" />
+                <ScalarProperty Name="LastEdit" ColumnName="LastEdit" />
+                <ScalarProperty Name="LastEditByXid" ColumnName="LastEditByXid" />
+                <ScalarProperty Name="CompanyXid" ColumnName="CompanyXid" />
+                <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M_Client">
+            <EntityTypeMapping TypeName="TestModelNamespace.M_Client">
+              <MappingFragment StoreEntitySet="M_Client">
+                <ScalarProperty Name="ClientInSecureCreditYN" ColumnName="ClientInSecureCreditYN" />
+                <ScalarProperty Name="AutoReminderYN" ColumnName="AutoReminderYN" />
+                <ScalarProperty Name="AutoCancelYN" ColumnName="AutoCancelYN" />
+                <ScalarProperty Name="ExportToAccounts" ColumnName="ExportToAccounts" />
+                <ScalarProperty Name="ExtractYN" ColumnName="ExtractYN" />
+                <ScalarProperty Name="ExtractDate" ColumnName="ExtractDate" />
+                <ScalarProperty Name="BookingNotificationEmailAddress" ColumnName="BookingNotificationEmailAddress" />
+                <ScalarProperty Name="ScheduleDay" ColumnName="ScheduleDay" />
+                <ScalarProperty Name="ShowAllocationLogicYN" ColumnName="ShowAllocationLogicYN" />
+                <ScalarProperty Name="ShowClientNameOnSupplierDocYN" ColumnName="ShowClientNameOnSupplierDocYN" />
+                <ScalarProperty Name="SupplierBatchSenderName" ColumnName="SupplierBatchSenderName" />
+                <ScalarProperty Name="SupplierBatchSenderAddress" ColumnName="SupplierBatchSenderAddress" />
+                <ScalarProperty Name="SlabOrTariff" ColumnName="SlabOrTariff" />
+                <ScalarProperty Name="reminderdays2" ColumnName="reminderdays2" />
+                <ScalarProperty Name="reminderdays1" ColumnName="reminderdays1" />
+                <ScalarProperty Name="B2CExpiryDays" ColumnName="B2CExpiryDays" />
+                <ScalarProperty Name="B2BExpiryDays" ColumnName="B2BExpiryDays" />
+                <ScalarProperty Name="DefaultExpiryDays" ColumnName="DefaultExpiryDays" />
+                <ScalarProperty Name="ExportedFileName" ColumnName="ExportedFileName" />
+                <ScalarProperty Name="DateFormat" ColumnName="DateFormat" />
+                <ScalarProperty Name="ShowMsbeYN" ColumnName="ShowMsbeYN" />
+                <ScalarProperty Name="SameAsBuyCurrencyYN" ColumnName="SameAsBuyCurrencyYN" />
+                <ScalarProperty Name="IncreaseCancellationDays" ColumnName="IncreaseCancellationDays" />
+                <ScalarProperty Name="AutoInvoicePBPC" ColumnName="AutoInvoicePBPC" />
+                <ScalarProperty Name="AutoInvoiceLogic" ColumnName="AutoInvoiceLogic" />
+                <ScalarProperty Name="AutoInvoicingYN" ColumnName="AutoInvoicingYN" />
+                <ScalarProperty Name="UseClientLogoYN" ColumnName="UseClientLogoYN" />
+                <ScalarProperty Name="CompanyXid" ColumnName="CompanyXid" />
+                <ScalarProperty Name="LastEditByXid" ColumnName="LastEditByXid" />
+                <ScalarProperty Name="LastEdit" ColumnName="LastEdit" />
+                <ScalarProperty Name="NotesXid" ColumnName="NotesXid" />
+                <ScalarProperty Name="OnlineBookingCutOffDays" ColumnName="OnlineBookingCutOffDays" />
+                <ScalarProperty Name="PastBookingsBasedOn" ColumnName="PastBookingsBasedOn" />
+                <ScalarProperty Name="PastBookingsCreditLimit" ColumnName="PastBookingsCreditLimit" />
+                <ScalarProperty Name="ForwardBookingsCreditLimit" ColumnName="ForwardBookingsCreditLimit" />
+                <ScalarProperty Name="DefaultTariffXid" ColumnName="DefaultTariffXid" />
+                <ScalarProperty Name="SubMarketXid" ColumnName="SubMarketXid" />
+                <ScalarProperty Name="SubStatusXid" ColumnName="SubStatusXid" />
+                <ScalarProperty Name="PrivateYN" ColumnName="PrivateYN" />
+                <ScalarProperty Name="TaxApplicableCountryXid" ColumnName="TaxApplicableCountryXid" />
+                <ScalarProperty Name="NationXid" ColumnName="NationXid" />
+                <ScalarProperty Name="CommissionYN" ColumnName="CommissionYN" />
+                <ScalarProperty Name="HeadOfficeYN" ColumnName="HeadOfficeYN" />
+                <ScalarProperty Name="CommunicationMethod" ColumnName="CommunicationMethod" />
+                <ScalarProperty Name="SourceXid" ColumnName="SourceXid" />
+                <ScalarProperty Name="wwwAddress" ColumnName="wwwAddress" />
+                <ScalarProperty Name="MarketXid" ColumnName="MarketXid" />
+                <ScalarProperty Name="CreditLimit" ColumnName="CreditLimit" />
+                <ScalarProperty Name="CreditDays" ColumnName="CreditDays" />
+                <ScalarProperty Name="InvoiceDays" ColumnName="InvoiceDays" />
+                <ScalarProperty Name="DefaultCurrencyXid" ColumnName="DefaultCurrencyXid" />
+                <ScalarProperty Name="NationalityXid" ColumnName="NationalityXid" />
+                <ScalarProperty Name="PrepayReqd" ColumnName="PrepayReqd" />
+                <ScalarProperty Name="NominalCode" ColumnName="NominalCode" />
+                <ScalarProperty Name="VatRegistrationNo" ColumnName="VatRegistrationNo" />
+                <ScalarProperty Name="VatNumber" ColumnName="VatNumber" />
+                <ScalarProperty Name="TaxRecoverableYN" ColumnName="TaxRecoverableYN" />
+                <ScalarProperty Name="ShowCommOnInv" ColumnName="ShowCommOnInv" />
+                <ScalarProperty Name="ClientType" ColumnName="ClientType" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="SubscribeToThirdParty" ColumnName="SubscribeToThirdParty" />
+                <ScalarProperty Name="ReceiveOtherInformation" ColumnName="ReceiveOtherInformation" />
+                <ScalarProperty Name="ParentXid" ColumnName="ParentXid" />
+                <ScalarProperty Name="LanguageXid" ColumnName="LanguageXid" />
+                <ScalarProperty Name="PriorityXid" ColumnName="PriorityXid" />
+                <ScalarProperty Name="RegistrationNo" ColumnName="RegistrationNo" />
+                <ScalarProperty Name="LegalName" ColumnName="LegalName" />
+                <ScalarProperty Name="ClientChainXid" ColumnName="ClientChainXid" />
+                <ScalarProperty Name="Client" ColumnName="Client" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Pid" ColumnName="Pid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

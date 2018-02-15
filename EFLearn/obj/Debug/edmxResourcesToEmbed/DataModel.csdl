@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TestModelNamespace" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="M_DiscountType">
+    <Key>
+      <PropertyRef Name="Pid" />
+    </Key>
+    <Property Name="Pid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DiscountType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NotesXid" Type="Int32" />
+    <Property Name="LastEdit" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastEditByXid" Type="Int32" Nullable="false" />
+    <Property Name="CompanyXid" Type="Int32" Nullable="false" />
+    <Property Name="Sequence" Type="Int32" />
+    <Property Name="Code" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="TestDBContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="M_DiscountType" EntityType="Self.M_DiscountType" />
+  </EntityContainer>
+</Schema>

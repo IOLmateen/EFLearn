@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TestModelNamespaceStoreContainer" CdmEntityContainer="TestDBContext">
+    <EntitySetMapping Name="M_DiscountType">
+      <EntityTypeMapping TypeName="TestModelNamespace.M_DiscountType">
+        <MappingFragment StoreEntitySet="M_DiscountType">
+          <ScalarProperty Name="Pid" ColumnName="Pid" />
+          <ScalarProperty Name="DiscountType" ColumnName="DiscountType" />
+          <ScalarProperty Name="NotesXid" ColumnName="NotesXid" />
+          <ScalarProperty Name="LastEdit" ColumnName="LastEdit" />
+          <ScalarProperty Name="LastEditByXid" ColumnName="LastEditByXid" />
+          <ScalarProperty Name="CompanyXid" ColumnName="CompanyXid" />
+          <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
